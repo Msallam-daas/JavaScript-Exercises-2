@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise (3): Changing images</title>
+    <style>
+      img {
+        display: block;
+        width: 500px;
+        height: 300px;
+        margin-top: 0.7em;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="list">
+      <option value="">select</option>
+      <option
+        value="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/1200px-Flag_of_Jordan.svg.png"
+      >
+        Jordan
+      </option>
+      <option
+        value="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/2560px-Flag_of_Egypt.svg.png"
+      >
+        Egypt
+      </option>
+      <option
+        value="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/800px-Flag_of_Saudi_Arabia.svg.png"
+      >
+        KSA
+      </option>
+      <option
+        value="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/1280px-Flag_of_the_United_Arab_Emirates.svg.png"
+      >
+        UAE
+      </option>
+    </select>
+
+    <img src="https://th.bing.com/th/id/R.bed7fe8f284e8affe44d3dd817bdb8f2?rik=pMJJqkdyZG46SA&riu=http%3a%2f%2fwww.jennybeaumont.com%2fwp-content%2fuploads%2f2015%2f03%2fplaceholder.gif&ehk=3wTSmgFAHjHh1cl9Ay9w%2bNOsyhgED387BWJVO7Il2KI%3d&risl=&pid=ImgRaw&r=0" alt="" class="img" />
+
+    <script>
+      const img = document.querySelector('.img');
+      const list = document.querySelector('#list');
+
+      list.addEventListener('change', function (event) {
+        img.src = event.target.value;
+      });
+    </script>
+  </body>
+</html>

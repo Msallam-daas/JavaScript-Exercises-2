@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #4:Formating Text</title>
+    <style>
+        #text{
+            border: 1px solid black;
+            width: 50%;
+            height: 50%;
+         
+        }
+    </style>
+</head>
+<body>
+    <select name="font-family" id="font-family">
+    <option value="arial">arial</option>
+    <option value="times">times</option>
+    <option value="courier">courier</option>
+    </select>
+
+    <select name="font-size" id="font-size">
+        <option value="12pt">12pt</option>
+        <option value="18pt">18pt</option>
+        <option value="25pt">25pt</option>
+    </select>
+    <input type="checkbox" id="itl" onclick="itl();" > Italic
+    <input type="checkbox" id="bol" onclick="bol();"> Bold
+    <input type="checkbox" id="lin" onclick="lin();">Underline
+   
+        <p id="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate error repellendus voluptatem</p>
+  <script>
+      let text=document.getElementById('text');
+      let fontfamily=document.getElementById('font-family');
+      let fontSize=document.getElementById('font-size');
+      fontfamily.addEventListener('change', function (event) {
+        text.style.fontFamily = event.target.value;
+      });
+      fontSize.addEventListener('change', function (event) {
+        text.style.fontSize = event.target.value;
+      });
+      function itl(){
+      if(document.getElementById('itl').checked){
+        text.style.fontStyle = "italic";
+      }else{
+        text.style.fontStyle = "normal";  
+      }
+    }
+    function bol(){
+      if(document.getElementById('bol').checked){
+        text.style.fontWeight = "bold";
+      }else{
+        text.style.fontWeight = "normal";  
+      }
+    }
+    function lin(){
+      if(document.getElementById('lin').checked){
+        text.style.textDecoration = "underline";
+      }else{
+        text.style.textDecoration = "none";  
+      }
+    }
+  </script>
+    
+</body>
+</html>

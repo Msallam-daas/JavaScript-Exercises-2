@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #5 Input Check example</title>
+    <style>
+        span{
+            color: crimson;
+            font-weight: bold;
+        }
+        input{
+            margin-top: 0.75em;
+            
+        }
+        label{
+            font-weight: bold;
+        }
+        #sub{
+        visibility: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+ <label > Password (min 6 characters)</label>      
+    <input type="password" id="pass" placeholder="password" oninput="checkpass();">
+    <span id="sp1"></span>
+    <br>
+    <label >Repeat  Password:</label> 
+    <input type="password" id="rppass" placeholder="password" oninput="checkpass();"><span id="sp2" ></span>
+    <br>
+    <button type="submit" id="sub" >submit</button>
+    <script>
+        function checkpass(){
+        let pass=document.getElementById("pass");
+        let rppass=document.getElementById("rppass");
+        let sp1=document.getElementById("sp1");
+        let sp2=document.getElementById("sp2");
+        if(pass.value.length >=6) {
+            sp1.innerHTML='correct length';
+        }else{
+            sp1.innerHTML='length is short';  
+        }
+        if(pass.value==rppass.value && pass.value.length >=6 ){
+            sp2.innerHTML='Password match';
+            sub.style.visibility='visible';
+        }
+        if(pass.value!==rppass.value && pass.value.length >=6 && rppass.value.length >=6){
+            sp2.innerHTML='the two password dont match';
+        }
+  
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

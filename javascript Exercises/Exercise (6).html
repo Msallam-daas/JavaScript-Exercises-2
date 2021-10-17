@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exersise #6 : Showing/Hiding Paragraph</title>
+    <style>
+        .container{
+            width: 60%;
+            padding-left: .3em;
+        }
+        #art1{
+            border: 1px solid black;
+            margin-bottom: .6em;
+            padding-bottom: 0.25em;
+            
+        }
+        #tit1{
+     
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+
+         .sec{
+             display: grid;
+             grid-template-columns: 80% 20%;
+             background-color: gray;
+             align-items: center;
+
+         }
+         a{
+             cursor: pointer;
+             color: rgb(216, 0, 0);
+             font-size: 1.25em;
+             display: block;
+         }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="art1">
+        <div class="sec">
+    <h1 id="tit1">What is Lorem ipsum?</h1>
+     <a id="show1" onclick="show();" >Show</a>
+    </div>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis laudantium reiciendis repellat, 
+        dolore fugiat quae possimus doloremque porro laboriosam cupiditate! Corporis ab facilis numquam, in iure accusamus id corrupti.
+        <a id="hide1" onclick="hide();" >hide</a>
+    </p>
+        
+    </div>
+    <div id="art1">
+        <div class="sec">
+    <h1 id="tit1">Why do we use it ?</h1>   
+    <a id="show1" onclick="s();" >Show</a>
+</div>
+    <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis laudantium reiciendis repellat, 
+        dolore fugiat quae possimus doloremque porro laboriosam cupiditate! Corporis ab facilis numquam, in iure accusamus id corrupti.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis corrupti nemo minus quam iure quae sint excepturi eaque 
+        necessitatibus! Nihil iusto, minus est necessitatibus quibusdam cum ad repellendus sit.
+        <a id="hide1" onclick="h();" >hide</a>  
+    </p>
+    
+</div>
+
+<div id="art1">
+    <div class="sec">
+    <h1 id="tit1">Where does it come from?</h1>
+    <a id="show1" onclick="sh();" >Show</a>
+</div>
+    <p id="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, blanditiis laudantium reiciendis repellat, 
+        dolore fugiat quae possimus doloremque porro laboriosam cupiditate! Corporis ab facilis numquam, in iure accusamus id corrupti.
+        <a id="hide1" onclick="hi();" >hide</a> 
+    </p>
+   
+        </div>
+</div>
+
+    <script>
+      
+            let para1=document.getElementById('para1');
+            let para2=document.getElementById('para2');
+            let para3=document.getElementById('para3');
+            let show1=document.getElementById('show1');
+            let hide1=document.getElementById('hide1');
+
+             function hide(){
+             para1.style.display='none';
+             }
+             function show(){
+              para1.style.display='block';
+             }
+
+             function h(){
+             para2.style.display='none';
+             }
+             function s(){
+              para2.style.display='block';
+             }             
+             function hi(){
+             para3.style.display='none';
+             }
+             function sh(){
+              para3.style.display='block';
+             }
+
+
+    </script>
+</body>
+</html>
