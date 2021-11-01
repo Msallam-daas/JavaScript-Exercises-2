@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initialscale=1.0">
+<title>Playlist Example</title>
+<style>
+    div{
+    background-color: rgb(241, 241, 241);
+    border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+ <input type="text" id="readTheInput" />
+<button id="clickButton" onclick="">Add Song</button>
+<div id="space" class="spac">
+</div>
+<script>
+    let readTheInput=document.getElementById("readTheInput");
+    let clickButton=document.getElementById("clickButton");
+    clickButton.addEventListener("click",addsong);
+    function addsong(){
+        let S=document.createElement("div");
+        S.innerHTML = readTheInput.value;
+        space.appendChild(S);
+    }
+</script>
+</body>
+</html>
+
+
